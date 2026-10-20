@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><title>BACKBEAT — prototype</title>
+<style>
+html,body{margin:0;height:100%;background:#05030a;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#fff}
+#gl,#hud{position:fixed;inset:0;width:100%;height:100%}
+#ui{position:fixed;inset:0;pointer-events:none}
+.scr{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;pointer-events:auto;background:radial-gradient(ellipse at 50% 0%,#2a0b4acc,#05030aee 70%);padding:calc(env(safe-area-inset-top) + 28px) 20px 24px;box-sizing:border-box;overflow-y:auto}
+.scr.on{display:flex}
+h1{font-size:44px;letter-spacing:6px;margin:8px 0 0;font-weight:900;background:linear-gradient(90deg,#ff3cac,#ffb000,#2bd2ff);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 14px #ff3cac88)}
+.sub{opacity:.6;letter-spacing:3px;font-size:12px;margin-bottom:22px}
+.card{width:100%;max-width:360px;border-radius:18px;padding:14px 16px;margin:8px 0;background:linear-gradient(135deg,#ffffff12,#ffffff05);border:1px solid #ffffff22;box-shadow:0 0 24px var(--c,#ff3cac)33 inset;cursor:pointer}
+.card b{font-size:19px;display:block}.card small{opacity:.65}
+.diffs{display:flex;gap:6px;margin-top:10px}
+.btn{flex:1;text-align:center;padding:9px 0;border-radius:12px;background:#ffffff14;border:1px solid #ffffff2a;font-weight:700;font-size:13px;cursor:pointer}
+.btn.big{flex:none;width:260px;padding:14px;font-size:17px;margin:8px;background:linear-gradient(90deg,#ff3cac,#784ba0);border:none;box-shadow:0 0 22px #ff3cac88}
+.stars{color:#ffd23f;letter-spacing:2px}
+.res{font-size:58px;font-weight:900;margin:6px}
+.row{display:flex;justify-content:space-between;width:280px;opacity:.85;margin:3px 0}
+</style></head><body>
+<canvas id="gl"></canvas><canvas id="hud"></canvas><div id="ui"></div>
+<script type="module" src="./src/main.ts"></script></body></html>
