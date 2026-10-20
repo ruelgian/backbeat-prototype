@@ -3,7 +3,7 @@ export type NType = 'tap' | 'accent' | 'roll' | 'flam' | 'choke' | 'open' | 'gho
 export interface Note { t: number; lane: number; type: NType; dur: number; judged: boolean; res?: string; fill: boolean; pair?: boolean; holding?: boolean; rollDone?: number }
 export type Diff = 0 | 1 | 2;
 export const DIFF_NAMES = ['EASY', 'NORMAL', 'HARD'];
-export const APPROACH_BEATS = [2.2, 1.6, 1.25]; // preview lead in beats
+export const APPROACH_BEATS = [4, 3.2, 2.6]; // preview lead in beats
 export const approachSec = (d: Diff, bpm: number) => Math.max(0.6, APPROACH_BEATS[d] * 60 / bpm);
 const GROOVES: Record<string, { k: number[]; s: number[]; g: number[] }> = {
   neon: { k: [0, 6, 10], s: [4, 12], g: [7, 15] },

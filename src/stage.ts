@@ -165,8 +165,8 @@ let energy = 0, shake = 0, punch = 0, time = 0, hatOpen = 0, hatTarget = 0, beat
 export function resize(w: number, h: number) {
   renderer.setSize(w, h, false); composer.setSize(w, h); camera.aspect = w / h;
   // fit kit width (~1.9 m) in portrait
-  const halfW = 0.86, dist = camBase.distanceTo(camLook); const fovH = 2 * Math.atan(halfW / dist); camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(fovH / 2) / camera.aspect));
-  camera.fov = Math.max(34, Math.min(75, camera.fov)); camera.updateProjectionMatrix();
+  const halfW = 1.0, dist = camBase.distanceTo(camLook); const fovH = 2 * Math.atan(halfW / dist); camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(fovH / 2) / camera.aspect));
+  camera.fov = Math.max(34, Math.min(75, camera.fov)); camera.setViewOffset(w, h, 0, -h * 0.27, w, h); camera.updateProjectionMatrix();
 }
 export function setTheme(c: string) { wallMat.uniforms.c.value.set(c); }
 export function hit(lane: number, vel: number, opts: { open?: boolean } = {}) {
